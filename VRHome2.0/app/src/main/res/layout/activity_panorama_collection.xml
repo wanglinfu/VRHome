@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    progressLayout:progress="false"
+    progressLayout:progressBackground="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            style="@style/TitleBar">
+
+            <include
+                android:id="@+id/view_back"
+                layout="@layout/view_title_bar_back" />
+
+
+            <TextView
+                style="@style/TV.Title"
+                android:text="@string/panorama_collection" />
+
+        </RelativeLayout>
+
+
+        <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+            android:id="@+id/load_more_list_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ListView
+                android:id="@+id/lv_panorama_collection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/transparent"
+                android:dividerHeight="10dp"
+                android:paddingBottom="10dp"
+                android:overScrollMode="ifContentScrolls"
+                android:paddingTop="10dp"
+                android:scrollbars="none">
+
+            </ListView>
+        </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
+
+    </LinearLayout>
+</com.vrseen.vrstore.view.ProgressRelativeLayout>

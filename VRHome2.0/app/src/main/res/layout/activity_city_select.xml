@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/panorama_city_select" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/title_bar"
+        android:padding="10dp"
+        android:background="@color/border_color"
+        android:id="@+id/ll_edit">
+
+        <EditText
+            android:id="@+id/et_panorama_city_search"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_radius_white_style"
+            android:drawablePadding="5dp"
+            android:hint="@string/panorama_city_search_hint"
+            android:padding="10dip"
+            android:textColor="#515151"
+            android:textSize="16dp"></EditText>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_edit"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        />
+
+    <ListView
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_edit"
+        android:layout_marginTop="7dp"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_noresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_edit"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/panorama_city_no_search_result"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <com.vrseen.vrstore.view.LetterListView
+        android:id="@+id/letterListView"
+        android:layout_width="18dip"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:alpha="0.7"
+        android:layout_below="@id/ll_edit" />
+
+    <!--<com.vrseen.vrstore.view.ProgressRelativeLayout-->
+        <!--xmlns:progressLayout="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/progress_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--progressLayout:progress="false"-->
+        <!--android:layout_below="@id/title_bar"-->
+        <!--progressLayout:progressBackground="@color/white">-->
+        <!--</com.vrseen.vrstore.view.ProgressRelativeLayout>-->
+
+
+</RelativeLayout>

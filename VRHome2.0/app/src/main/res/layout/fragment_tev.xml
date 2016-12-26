@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    progressLayout:progressBackground="@color/white"
+    progressLayout:progress="false"
+    >
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/borderColor"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_search"
+                    android:editable="false"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp"
+                    android:hint="@string/file_search_hint"
+                    android:textColorHint="@color/common_app_color"
+                    android:id="@+id/et_tev_search"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_filter">
+
+                <TextView
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/film_filter"
+                    android:textColor="@color/common_app_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <in.srain.cube.views.loadmore.LoadMoreGridViewContainer
+            android:id="@+id/load_more_grid_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/cube_mints_white">
+
+            <in.srain.cube.views.GridViewWithHeaderAndFooter
+                android:id="@+id/load_more_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                android:focusable="false"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="2"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:stretchMode="columnWidth" />
+
+        </in.srain.cube.views.loadmore.LoadMoreGridViewContainer>
+
+        <!--<ScrollView-->
+            <!--android:id="@+id/scrollView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scrollbars="none">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/white"-->
+                <!--android:orientation="vertical">-->
+
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_tujian"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="38dp"-->
+                    <!--android:background="@color/white">-->
+
+                    <!--<View-->
+                        <!--android:id="@+id/view_recommend"-->
+                        <!--android:layout_width="5dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:background="@color/common_app_color" />-->
+
+                    <!-- -->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_recommend"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_toRightOf="@id/view_recommend"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="小编推荐"-->
+                        <!--android:textColor="@color/titleColor" />-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_below="@id/rl_tujian"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp">-->
+
+                    <!--<in.srain.cube.image.CubeImageView-->
+                        <!--android:id="@+id/iv_recommend"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="200dp"-->
+                        <!--android:background="@color/main_title_color"-->
+                        <!--android:scaleType="centerCrop" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:paddingLeft="5dp"-->
+                        <!--android:paddingRight="5dp"-->
+                        <!--android:paddingBottom="3dp"-->
+                        <!--android:background="@drawable/bg_quanjing">-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="15sp"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:id="@+id/tv_recommend_name"/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textSize="13sp"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:id="@+id/tv_recommend_des"/>-->
+                    <!--</LinearLayout>-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="38dp"-->
+                    <!--android:background="@color/white">-->
+
+                    <!--<View-->
+                        <!--android:id="@+id/view"-->
+                        <!--android:layout_width="5dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:background="@color/common_app_color" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_type"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_toRightOf="@id/view"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="@string/film_hot"-->
+                        <!--android:textColor="@color/titleColor" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_viewMore"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_marginRight="15dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="@string/view_more"-->
+                        <!--android:textColor="@color/basefontColor"-->
+                        <!--android:textSize="12sp" />-->
+                <!--</RelativeLayout>-->
+
+                <!--&lt;!&ndash;<include&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/view_group"&ndash;&gt;-->
+                    <!--&lt;!&ndash;layout="@layout/item_group_home" />&ndash;&gt;-->
+            <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+    </LinearLayout>
+</com.vrseen.vrstore.view.ProgressRelativeLayout>

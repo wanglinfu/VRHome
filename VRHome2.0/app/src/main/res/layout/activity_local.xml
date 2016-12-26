@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            style="@style/TitleBar">
+
+            <include
+                android:id="@+id/view_back"
+                layout="@layout/view_title_bar_back" />
+
+            <TextView
+                style="@style/TV.Title"
+                android:text="@string/mine_find_local" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/viewpagertab"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:stl_clickable="true"
+                app:stl_customTabTextLayoutId="@layout/custom_tab"
+                app:stl_defaultTabBackground="?attr/selectableItemBackground"
+                app:stl_defaultTabTextHorizontalPadding="16dp"
+                app:stl_defaultTabTextSize="18sp"
+                app:stl_distributeEvenly="false"
+                app:stl_dividerColor="@color/transparent"
+                app:stl_drawDecorationAfterTab="false"
+                app:stl_indicatorAlwaysInCenter="false"
+                app:stl_indicatorColor="@color/common_app_color"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="2dp"
+                app:stl_indicatorWidth="auto"
+                app:stl_indicatorWithoutPadding="false" />
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/viewpagertab" />
+
+        <include  android:id="@+id/no_data_layout" layout="@layout/no_data_layout"  />
+
+    </LinearLayout>
+</com.vrseen.vrstore.view.ProgressRelativeLayout>

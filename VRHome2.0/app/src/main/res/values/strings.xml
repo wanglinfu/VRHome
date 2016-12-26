@@ -1,0 +1,292 @@
+<resources>
+
+    <!--我的-->
+    <string name="mine_center">个人中心</string>
+    <string name="mine_vip">唯镜VIP会员</string>
+    <string name="mine_vip_renew">续费</string>
+    <string name="mine_open_playrecord">展开</string>
+    <string name="mine_play_record">播放记录</string>
+    <string name="mine_my_down">我的下载</string>
+    <string name="mine_my_collect">我的收藏</string>
+    <string name="mine_my_setting">设置</string>
+    <string name="mine_register">注册</string>
+    <string name="mine_input_phone">请输入手机号码</string>
+    <string name="mine_input_code">请输入验证码</string>
+    <string name="mine_input_pwd">请输入密码</string>
+    <string name="mine_register_agree">同意唯见账号的用户协议和隐私政策</string>
+    <string name="mine_setting_wifi">允许非wifi环境下载</string>
+    <string name="mine_setting_cache">清除缓存</string>
+    <string name="mine_setting_version">检查新版本</string>
+    <string name="mine_setting_agreement">隐私协议</string>
+    <string name="mine_setting_license">软件许可及服务协议</string>
+    <string name="mine_setting_aboutus">关于我们</string>
+    <string name="mine_setting_loginout">退出登录</string>
+    <string name="mine_setting_feedback">意见反馈</string>
+    <string name="mine_setting_aboutus_chenjing">为沉浸体验而生</string>
+    <string name="mine_setting_aboutus_license">© 2015-2016VRSeen, All rights reserved</string>
+    <string name="mine_setting_aboutus_comp_name">唯见科技版权所有</string>
+    <string name="mine_setting_feedback_title">您有什么问题或建议想对我们说?</string>
+    <string name="mine_setting_feedback_default">您的宝贵意见，就是我们进步的源泉</string>
+    <string name="mine_setting_feedback_default2">请详细描述您遇到的问题，有助于我们快速的定位并解决问题，或留下您宝贵的建议或意见，我们会认真进行评估！</string>
+    <string name="mine_feedback_success">意见反馈成功</string>
+    <string name="mine_feedback_fail">意见反馈失败</string>
+    <string name="mine_setting_wifi_alert">运营商网络下载可能会产生超额流量，确认开启？</string>
+    <string name="mine_login_title">登录</string>
+    <string name="mine_forget_pwd_title">忘记密码</string>
+    <string name="mine_forget_pwd">忘记密码？</string>
+    <string name="mine_third_title">第三方登录</string>
+    <string name="mine_agreement">同意唯见账户的用户协议和隐私政策</string>
+    <string name="mine_getcode">正在获取</string>
+    <string name="mine_regist_success">注册成功</string>
+    <string name="mine_regist_fail">注册失败</string>
+    <string name="mine_login_error">用户名或者密码错误</string>
+    <string name="mine_login_null_error">用户名和密码都不可为空</string>
+    <string name="mine_get_personal_info_fail">获取个人信息失败</string>
+    <string name="mine_get_personal_data_success">获取个人数据成功</string>
+    <string name="mine_get_personal_data_fail">获取个人数据失败</string>
+    <string name="mine_find_pwd_success">找回成功，登陆中</string>
+    <string name="mine_find_pwd_fail">找回失败</string>
+    <string name="mine_authorization_fail">授权失败 </string>
+    <string name="mine_cancle_authorization">取消授权</string>
+    <string name="mine_vip_exchange">兑换唯镜会员</string>
+    <string name="mine_vip_exchange_input_card">请输入兑换码，请注意大小写！</string>
+    <string name="mine_vip_exchange_title1">一、兑换使用方法</string>
+    <string name="mine_vip_exchange_title2">二、优惠劵类型</string>
+    <string name="mine_vip_exchange_desp1">在网站／优惠劵实物卡获取16位兑换码，填入上方输入框进行兑换。（注意区分大小写）</string>
+    <string name="mine_vip_exchange_desp2">体验月卡／至尊年卡：兑换后立即获赠相应时长的好莱坞会员服务。</string>
+    <string name="mine_vip_exchange_desp3">注：使用话费开通且服务期限为“按月支付”的会员账号，暂不支持使用优惠劵兑换。</string>
+    <string name="mine_vip_exchange_fail">兑换会员失败</string>
+    <string name="mine_vip_exchange_suc">兑换会员成功</string>
+    <string name="mine_vip_card_null">VIP卡号不能为空</string>
+    <string name="mine_login_suc">登录成功</string>
+    <string name="mine_login_fail">登录失败</string>
+    <string name="mine_login_guide">登录/注册</string>
+    <string name="mine_collect">我的收藏</string>
+    <string name="mine_clear_all">全部清除</string>
+    <string name="mine_add_record_fail">添加记录失败</string>
+    <string name="mine_continue_play">继续播放</string>
+    <string name="nodata">更多精彩内容,敬请期待!</string>
+    <string name="palyrecord_nodata">暂无播放记录！</string>
+
+    <string name="film_collect_get_error">获取收藏数据失败</string>
+
+    <string name="app_download_get_error">获取应用数据失败#100001</string>
+    <string name="app_download_wait">下载排队中...</string>
+    <string name="app_get_ad_error">获取应用广告数据失败</string>
+    <string name="app_get_list_error">获取应用列表失败</string>
+    <string name="app_no_wifi_download">您现在使用的是运营商网络，继续下载可能产生超额流量费，是否继续？</string>
+    <string name="app_size">大小</string>
+    <string name="app_count">次</string>
+    <string name="app_open">打开</string>
+    <string name="app_intall">安  装</string>
+    <string name="app_detail">详情</string>
+    <string name="app_hot">热门</string>
+    <string name="app_rank">排行</string>
+    <string name="app_type">分类</string>
+    <string name="app_new">新品</string>
+    <string name="app_browse">浏览：%d次</string>
+    <string name="app_type_data"><font color="#5e5e5e">分类："</font><font color="#aaaaaa">%s</font>"</string>
+    <string name="app_size_data"><font color="#5e5e5e">大小："</font><font color="#aaaaaa">%s</font>"</string>
+    <string name="app_down_data"><font color="#5e5e5e">下载："</font><font color="#aaaaaa">%s次</font>"</string>
+    <string name="app_version_data"><font color="#5e5e5e">版本："</font><font color="#aaaaaa">%s</font>"</string>
+
+    <string-array name="app_rank">
+        <item>发布时间</item>
+        <item>下载量</item>
+        <item>平均分</item>
+        <item>名称</item>
+    </string-array>
+
+    <string name="download_cache_exit">已经加入缓存中</string>
+    <string name="download_start_or_continue_download">开始/继续下载</string>
+    <string name="download_fail">下载失败</string>
+    <string name="download_complete">下载完成</string>
+    <string name="downlaoding">下载中</string>
+    <string name="delete_download">确认删除?</string>
+    <string name="delete_fail">删除失败</string>
+    <string name="download_jixu">继 续</string>
+    <string name="download_open">打 开</string>
+    <string name="download_pause">暂 停</string>
+    <string name="download_xiazai">下 载</string>
+    <string name="download_fauliar">下载失败</string>
+    <string name="download_again">重新下载</string>
+    <string name="download_wait">等待下载</string>
+    <string name="download_wifi">非wifi</string>
+
+    <string name="film_detail_ling">铃声</string>
+    <string name="film_detail_light">亮度</string>
+    <string name="film_filter">筛选</string>
+    <string name="film_name">电影名字</string>
+    <string name="film_vip_alert_msg">付费电影，观看请开通VIP</string>
+    <string name="film_play_error">当前视频无法播放 </string>
+    <string name="film_all_film">全部</string>
+    <string name="film_loading">正在努力加载中...</string>
+    <string name="film_please_wait">请耐心等待...</string>
+    <string name="film_play_format_error">当前片源有未知异常，请原谅</string>
+    <string name="film_get_network_res_error">获取网络资源失败，请检查网络</string>
+    <string name="film_loading_local_resource">正在加载本地数据中...</string>
+    <string name="film_continue_play">正在准备播放下一集,请稍后</string>
+    <string name="film_play_to">播放至第</string>
+    <string name="film_play_minutes">分钟</string>
+    <string name="film_detail_error">获取影视详细出错</string>
+    <string name="film_relate_error">获取影视相关出错</string>
+    <string name="film_relate_more">相关电影</string>
+    <string name="film_detail_play">播放：</string>
+    <string name="film_detail_update">更新：</string>
+    <string name="film_detail_actors">主演：</string>
+    <string name="film_detail_introduce">简介：</string>
+    <string name="film_detail_open">展开</string>
+    <string name="film_detail_close">缩略</string>
+    <string name="film_episode_count">%s</string>
+    <string name="film_collect_suc">收藏成功</string>
+    <string name="film_collect_fail">收藏失败</string>
+    <string name="film_cancel_collect_suc">取消收藏成功</string>
+    <string name="film_cancel_collect_fail">取消收藏失败</string>
+    <string name="film_filter_fail">获取影视筛选项失败</string>
+    <string name="film_filter_data_fail">获取影视筛选数据失败</string>
+    <string name="film_hot">热门电影</string>
+    <string name="file_search_hint">搜索主题</string>
+
+    <string name="film_good_rank">好评榜</string>
+    <string name="film_new_rank">新上线</string>
+    <string name="film_hot_rank">热播榜</string>
+
+
+
+    <string name="config_delete">确定删除</string>
+    <string name="delete_suc">删除成功</string>
+    <string name="loading">正在努力加载中...</string>
+    <string name="please_wait">请耐心等待...</string>
+    <string name="play_format_error">当前片源有未知异常，请原谅</string>
+    <string name="get_network_res_error">获取网络资源失败，请检查网络</string>
+    <string name="loading_local_resource">正在加载本地数据中...</string>
+    <string name="no_data">暂无下载记录！</string>
+    <string name="no_app">当前无该安装包</string>
+    <string name="notice">提示</string>
+    <string name="config">确定</string>
+    <string name="cancle">取消</string>
+    <string name="delete">删除</string>
+    <string name="selectAll">全选</string>
+    <string name="no_http_url_error">当前不是有效的http地址</string>
+    <string name="edit">编辑</string>
+    <string name="delete_cache">是否清空缓存?</string>
+    <string name="left">＞</string>
+    <string name="right">＜</string>
+    <string name="validate">验证</string>
+    <string name="no_last_data">当前已经是全部数据</string>
+    <string name="next">下一步</string>
+    <string name="backpage">返回</string>
+    <string name="submit">提交</string>
+    <string name="alert_byte">位</string>
+    <string name="TODO">TODO</string>
+    <string name="network_exception">网络异常</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_full_scene">频道</string>
+    <string name="tab_apps">应用</string>
+    <string name="tab_video">影视</string>
+    <string name="tab_find">发现</string>
+    <string name="tab_mine">我的</string>
+    <string name="unknown_error">unknown_error</string>
+    <string name="get_recommend_fail">获取推荐失败</string>
+    <string name="confirm_out">再按一次退出程序</string>
+    <string name="get_data_fail">获取数据失败</string>
+    <string name="view_more">全部显示</string>
+    <string name="wifi_connect">当前网络wifi已连接</string>
+    <string name="wifi_weak">当前网络较弱</string>
+    <string name="mobile_net_connect">当前3G/4G已连接</string>
+    <string name="channel_input_add">请输入直播地址</string>
+    <string name="channel_live">直播</string>
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放刷新</string>
+    <string name="xlistview_header_hint_loading">正在加载</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">释放载入更多</string>
+    <string name="xlistview_footer_hint_no_more">没有更多了</string>
+    <string name="umeng_update_error">退出App中...</string>
+    <string name="new_best">当前已经是最新版本</string>
+
+    <string name="panorama_title">全景资源</string>
+    <string name="panorama">全景</string>
+    <string name="panorama_city_select">选择城市</string>
+    <string name="panorama_city_clear">清除</string>
+    <string name="panorama_city_search">搜索</string>
+    <string name="panorama_city_search_hint">城市/行政区/拼音</string>
+    <string name="panorama_city_location_hint">当前定位城市</string>
+    <string name="panorama_city_hot_hint">热门城市</string>
+    <string name="panorama_city_no_search_result">抱歉，没有找到您搜索的城市</string>
+    <string name="panorama_collection">专辑</string>
+    <string name="panorama_detail_position">景点：</string>
+    <string name="panorama_detail_download_times">下载：</string>
+    <string name="panorama_detail_type">类型：</string>
+    <string name="panorama_detail_file_size">大小：</string>
+    <string name="panorama_detail_meta">维度：</string>
+    <string name="panorama_detail_time">时间：</string>
+    <string name="panorama_detail_introduction">介绍：</string>
+    <string name="panorama_detail_same_position">同景点</string>
+    <string name="panorama_collection_detail_title">专辑详情</string>
+    <string name="panorama_detail_fail">获取全景详细信息失败</string>
+    <string name="panorama_relateds">相关内容</string>
+    <string name="panorama_alltype_video">视频</string>
+    <string name="panorama_alltype_pic">图片</string>
+    <string name="panorama_alltype_3d">3D</string>
+    <string name="panorama_alltype_manyou">漫游</string>
+
+    <string name="mine_find_local">本地</string>
+    <string name="mine_find_download">我的下载</string>
+    <string name="find_local_today">今天</string>
+    <string name="find_local_yesterday">昨天</string>
+    <string name="find_local_twodayago">前天</string>
+    <string name="find_local_lastweek">上周</string>
+    <string name="find_local_lastmonth">上月</string>
+    <string name="find_local_longago">一个月前</string>
+    <string name="find_download_recent">最近下载</string>
+    <string name="find_download_previous">以前下载</string>
+    <string name="find_local_nodata">唯镜没有资源，请导入文件到唯镜APP下！</string>
+    <string name="click_lock">点击锁定</string>
+    <string name="click_unlock">点击解锁</string>
+    <string name="film_play_warn">您现在使用的是运营商网络，继续观看可能产生超额流量费，是否继续？</string>
+
+    <string-array name="titles_array">
+        <item>全景视频</item>
+        <item>全景图片</item>
+        <item>3D电影</item>
+        <item>2D电影</item>
+    </string-array>
+
+    <string-array name="channels_array">
+        <item>全景</item>
+        <item>普通</item>
+    </string-array>
+
+    <string name="zte_error">请安装中兴账号apk包</string>
+    <string name="zte_about">ZTE手机定制版</string>
+    <string name="vip_limit_to">Vip有效期至:</string>
+    <string name="to_get_vip">兑换会员</string>
+    <string name="wifi_is_not_connected">wifi连接</string>
+    <string name="mobile_is_connecting">mobile连接</string>
+    <string name="no_connect">未连接</string>
+    <string name="left_and_right">左右</string>
+    <string name="top_and_down">上下</string>
+    <string name="account_update_hin">账号组件被升级,无法操作</string>
+    <string name="account_add_success">添加账号成功</string>
+    <string name="zte_account_add_fail">中兴账号添加失败</string>
+    <string name="location">定位</string>
+    <string name="recent">最近</string>
+    <string name="hot">热门</string>
+    <string name="city_has_no_data_hint">该城市目前没有数据</string>
+    <string name="doing_location">正在定位</string>
+    <string name="location_fail">未定位到城市,请选择</string>
+    <string name="select_retry">重新选择</string>
+    <string name="history_record">历史记录</string>
+    <string name="location_by_gps">通过GPS定位我当前的位置</string>
+    <string name="video_need_to_downloadhint">该资源无法在线播放，是否下载？</string>
+    <string name="password_is_short_hint">密码不能少于6位！</string>
+    <string name="get_retry">重新获取</string>
+    <string name="type_video_dianshiju">综艺</string>
+    <string name="video_record_delete_fail">影视删除失败</string>
+    <string name="video_record_delete_success">影视删除成功</string>
+    <string name="sure_to_delete_hint">确定删除选中的</string>
+    <string name="times_record">条记录？</string>
+</resources>

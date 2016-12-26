@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/mine_find_download" />
+        <TextView
+            android:id="@+id/tv_deleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:text="删除全部"/>
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_downloadInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_app"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="应用"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@drawable/download_textcolor_selector"
+            android:background="@drawable/download_radiobtn_app_selector"
+            android:button="@null"/>
+
+        <RadioButton
+            android:id="@+id/rb_pano"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="全景"
+            android:padding="5dp"
+            android:textColor="@drawable/download_textcolor_selector"
+            android:background="@drawable/download_radiobtn_pano_selector"
+            android:gravity="center"
+            android:button="@null"/>
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

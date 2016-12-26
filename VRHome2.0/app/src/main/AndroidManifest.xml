@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vrseen.vrstore">
+
+    <!-- 联网 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 读取 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RAISED_THREAD_PRIORITY" />
+    <!--友盟的权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+
+
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 联网 -->
+    <!-- 允许程序安装应用 -->
+    <permission android:name="android.permission.INSTALL_PACKAGES" />
+    <permission android:name="android.permission.DELETE_PACKAGES" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch.distinct"
+        android:required="false" />
+    <!-- usb -->
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <application
+        android:name=".VRHomeApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_zte"
+        android:label="快讯视频"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            />
+         
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_devices" />
+        </activity>
+        <activity android:name=".activity.film.FilmActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.film.VideoNavActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的 -->
+        <activity android:name=".activity.user.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.MySettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.AboutUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.AgreementActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.FeedbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.ForgetPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.ExChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.MyCollectActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.user.MyPlayRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.app.AppDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.film.FilmFilterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.SelectPicPopupWindow" android:theme="@style/MyDialogStyleBottom" />
+
+        <!-- 发现 -->
+        <activity android:name=".activity.find.DownloadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.find.LocalActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.film.FilmDetailActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1104729331" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		<activity android:name="com.google.unity.GoogleUnityActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale">
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+        </activity>
+        <activity android:name=".activity.panorama.PanoramaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.panorama.CitySelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.panorama.PanoramaCollectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.panorama.PanoramaDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.panorama.Panorama1Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.panorama.PanoramaCollectionDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.search.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.channel.LiveChannelActivity"
+			android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ComeInVRActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        </activity>
+        <service android:name=".server.DownloadService">
+            <intent-filter>
+                <action android:name="download.service.action" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="IMMERSIVE_MODE"
+            android:value="true" />
+
+        <!-- WelcomeActivity -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="a572c5fd67e58ec622001898" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- 友盟 -->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+        <!-- 百度 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="RFYlnmmIb7PB0GCD0j9H91239CIGxiP6" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+       <!-- <meta-data android:value="YOUR_APP_KEY" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>-->
+
+        <!-- 注册usb静态广播接收器 -->
+        <receiver android:name="com.vrseen.vrstore.server.UsbdeviceReciver">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

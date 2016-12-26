@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    progressLayout:progressBackground="@color/white"
+    progressLayout:progress="false"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/film_player_layout"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/view_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/arrow_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    style="@style/titleBar_back"
+                   />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/film_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:id="@+id/detail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/film_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:textColor="@color/titleColor"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:maxEms="10"
+                        />
+
+                    <TextView
+                        android:id="@+id/textview_more_introduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:text="@string/film_detail_open"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="14dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/ll_playRe"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:text="@string/film_detail_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:textColor="@color/lightgrayColor"
+                            />
+
+                        <TextView
+                            android:id="@+id/play_count"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textColor="@color/lightgrayColor"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:text="@string/film_detail_update"
+                            android:textColor="@color/lightgrayColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/play_total_count"
+                            android:text=""
+                            android:textColor="@color/lightgrayColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_actor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:text="@string/film_detail_actors"
+                            android:textSize="14sp"
+                            android:textColor="@color/lightgrayColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <TextView
+                            android:id="@+id/play_actor"
+                            android:text=""
+                            android:textColor="@color/lightgrayColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/introduction_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:id="@+id/jianjie"
+                            android:text="@string/film_detail_introduce"
+                            android:textColor="@color/lightgrayColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/play_introduction"
+                            android:layout_toRightOf="@+id/jianjie"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:ellipsize="end"
+                            android:text=""
+                            android:textColor="@color/lightgrayColor"
+                            android:lineSpacingExtra="2dp"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:layout_marginRight="14dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white88"/>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/film_drama_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/drama_count_layout"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white88"/>
+
+
+                <include layout="@layout/film_correlation_layout"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lock_screen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:background="#99000000"
+        android:visibility="invisible"
+        android:padding="2dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/reload"
+                />
+            <ImageView
+                android:id="@+id/iv_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lock"
+                android:visibility="invisible"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/tv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="8sp"
+            android:textColor="#fff"
+            android:text="点击锁定"/>
+    </LinearLayout>
+</com.vrseen.vrstore.view.ProgressRelativeLayout>

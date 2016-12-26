@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <!-- 中兴定制头盔 -->
+      <usb-device vendor-id="6610" product-id="1536" />
+      <!-- 官方头盔 -->
+      <!--<usb-device vendor-id="10291" product-id="1" />-->
+</resources>

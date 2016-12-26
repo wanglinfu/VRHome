@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            style="@style/TitleBar">
+
+            <include
+                android:id="@+id/view_back"
+                layout="@layout/view_title_bar_back" />
+
+            <TextView
+                style="@style/TV.Title"
+                android:text="@string/mine_my_collect" />
+
+        </RelativeLayout>
+
+        <in.srain.cube.views.loadmore.LoadMoreGridViewContainer
+            android:id="@+id/load_more_grid_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cube_mints_white">
+
+            <in.srain.cube.views.GridViewWithHeaderAndFooter
+                android:overScrollMode="never"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="10dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:id="@+id/gridview_collect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:scrollbars="none" />
+
+        </in.srain.cube.views.loadmore.LoadMoreGridViewContainer>
+
+
+        <include android:id="@+id/no_data_layout"
+            layout="@layout/no_data_layout"
+            ></include>
+    </LinearLayout>
+</com.vrseen.vrstore.view.ProgressRelativeLayout>

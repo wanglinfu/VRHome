@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_movie_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/movie_vertical_dp">
+
+            <in.srain.cube.image.CubeImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tp_yingshimoren"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_movie_update_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/black"
+                android:padding="4dp"
+                android:text="更新至20集"
+                android:alpha="0.7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@+id/iv_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_vip"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_movie_cover"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="终结者5"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/main_title_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="超时空发发发发发发"
+            android:textColor="@color/basefontColor"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</RelativeLayout>

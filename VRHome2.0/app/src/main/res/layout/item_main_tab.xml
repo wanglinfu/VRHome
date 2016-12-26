@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主界面下方tabhost中的项目 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:clickable="true"
+    android:layout_height="@dimen/main_tab_height"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_tabitem"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingTop="18dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tv_new_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:minHeight="16dp"
+            android:minWidth="16dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@drawable/text_home"
+        android:text="TODO"
+        android:textSize="10sp" />
+
+</LinearLayout>

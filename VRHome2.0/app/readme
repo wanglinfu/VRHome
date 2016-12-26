@@ -1,0 +1,4 @@
+VRSeenHome官方版本(official)与ZTE版本发布差异项:
+                                            official                    ZTE
+applicationId(build.gradle)             com.vrseen.vrstore          com.vrseen.zvr
+android:icon(AndroidManifest.xml)       @drawable/ic_launcher       @drawable/ic_launcher_zte

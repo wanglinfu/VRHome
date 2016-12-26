@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/borderColor"
+    >
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/mine_play_record" />
+
+        <TextView
+            android:id="@+id/tv_edit_or_delete"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+
+    <in.srain.cube.views.loadmore.LoadMoreListViewContainer
+        android:id="@+id/load_more_grid_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/cube_mints_white">
+
+        <com.vrseen.vrstore.view.swipemenulistview.SwipeMenuListView
+            android:layout_below="@+id/title_bar"
+            android:id="@+id/listView_record"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="3dp"
+            />
+
+    </in.srain.cube.views.loadmore.LoadMoreListViewContainer>
+
+    <include  android:id="@+id/no_data_layout" layout="@layout/no_data_layout"  />
+
+    <Button
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_delete"
+        android:background="@drawable/btn_radius_red_style"
+        android:text="@string/delete"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+ </LinearLayout>

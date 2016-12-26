@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    progressLayout:progressBackground="@color/white"
+    progressLayout:progress="false"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+            <Spinner android:id="@+id/spinner"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:dropDownVerticalOffset="40dp"
+                />
+            />
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/spinner"
+                android:id="@+id/edit_website"
+                android:hint="@string/channel_input_add"
+                android:background="@drawable/textview_radius_white_style"
+                style="@style/common_edit_text"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:layout_width="190dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/textConfig"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="@string/config"
+                android:layout_width="40dp"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/webview_liveChannel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </WebView>
+
+
+</LinearLayout>

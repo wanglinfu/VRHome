@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <in.srain.cube.image.CubeImageView
+            android:id="@+id/civ_playrecordImg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tp_yingshimoren" />
+        <ImageView
+            android:id="@+id/iv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_vip"/>
+
+        <LinearLayout
+            android:id="@+id/ll_title_episode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/civ_playrecordImg"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_record_title"
+                android:text="终结者511"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/common_ellipsize_text"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:maxEms="8"
+                />
+            <TextView
+                android:id="@+id/tv_record_episode"
+                android:text="（第一集）"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#5e5e5e"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/civ_playrecordImg"
+            android:layout_below="@id/ll_title_episode"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_shij"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:text="今天"
+                android:textColor="@color/lightgrayColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_seeTo"
+            android:text="观看至0分钟"
+            android:textColor="@color/lightgrayColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/civ_playrecordImg"
+            android:layout_below="@id/ll_time"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:text="@string/mine_continue_play"
+            android:textColor="@color/lite_blue"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/tv_seeTo"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_delete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tick"/>
+    </RelativeLayout>
+</FrameLayout>

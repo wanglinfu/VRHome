@@ -1,0 +1,136 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.vrseen.zvr"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 2
+        versionName "2.0.4"
+        resValue "string", "app_name", "唯镜"
+        /**
+         * 生产环境  0
+         * 测试环境  !0
+         */
+        buildConfigField "int", "ENV", "0"  //0是正式，1是测试
+        multiDexEnabled true
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "channel_name"]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('release.keystore')
+            storePassword "vrseen007"
+            keyAlias "vrseen"
+            keyPassword "vrseen007"
+        }
+
+        debugConfig {
+            keyAlias "vrseen"
+            keyPassword "vrseen007"
+            storeFile file("vrseenkey_new")
+            storePassword "vrseen007"
+        }
+
+    }
+
+    productFlavors {
+        dev {
+          // buildConfigField "int", "ENV", "1"
+        }
+
+        pro {
+            //buildConfigField "int", "ENV", "0"
+        }
+
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_360"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            //删除未使用的资源
+            shrinkResources true
+            minifyEnabled true // 设置代码进行混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+//            versionNameSuffix '.debug'
+            //  signingConfig signingConfigs.debugConfig
+        }
+    }
+}
+
+task nativeLibsToJar(type: Zip, description: "create a jar archive of the native libs") {
+    destinationDir file("$projectDir/libs")
+    baseName "Native_Libs2"
+    extension "jar"
+    from fileTree(dir: "libs", include: "**/*.so")
+    into "lib"
+}
+
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn(nativeLibsToJar)
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'de.greenrobot:greendao:2.1.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    //Optional: see how to use the utility.
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    //Optional: see how to use the utility.
+
+    //compile 'com.ogaclejapan.smarttablayout:utils-v13:1.6.1@aar'
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile project(':onekeyshare')
+    compile project(':sharesdk')
+    compile 'com.android.support:multidex:1.0.0'
+    compile files('libs/wasu.jar')
+    compile files('libs/locSDK_6.23.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile(name: 'gvr_android_common', ext: 'aar')
+    compile(name: 'unitygvractivity', ext: 'aar')
+    compile files('libs/EasyMovieTexture.jar')
+    compile files('libs/unity-classes.jar')
+    compile files('libs/zip_file.jar')
+    compile files('libs/VRSeenFramwork.jar')
+    compile files('libs/VRSeenUtil.jar')
+    compile files('libs/gvr_audio.jar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_shape_circle_white"
+            android:orientation="vertical">
+
+        <TextView
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="图片来源"
+            android:textSize="15sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#999e9e9e"/>
+
+        <TextView
+            android:id="@+id/tv_pick_photo"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="从相册选择"
+            android:clickable="true"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dip"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape_circle_white"
+            android:text="取消"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+

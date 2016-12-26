@@ -1,0 +1,55 @@
+<resources>
+    <string name="message_account_null">账号不能为空</string>
+    <string name="message_account_phone">请填入11位手机号</string>
+    <string name="message_account_code">验证码需要5位数字</string>
+    <string name="message_account_pwd">密码最短为6个字符</string>
+    <string name="message_account_reg_ing">注册中</string>
+    <string name="message_account_reg_suc">注册账户成功，请登录</string>
+    <string name="message_account_getRegCode_error">获取验证码失败</string>
+    <string name="message_account_getRegCode_suc">验证码已经发送，请查收手机短信</string>
+    <string name="message_account_need_login">请先登录</string>
+    <string name="message_account_pwd_equip">密码需要一致</string>
+    <string name="message_account_error_input">您输入的字符不能超出</string>
+    <string name="message_account_checkbox">请选中用户协议和隐私政策</string>
+
+    <string name="message_server_1000401">未授权请先登录。</string>
+    <string name="message_server_1000402">用户名和密码错误。</string>
+    <string name="message_server_1000404">记录ID不存在。</string>
+    <string name="message_server_1001001">用户名不是有效的邮箱或手机。</string>
+    <string name="message_server_1001002">用户名不能为空。</string>
+    <string name="message_server_1001003">用户名已经存在。</string>
+    <string name="message_server_1001004">密码至少为 6 个字符。</string>
+    <string name="message_server_1001005">密码不能大于 16 个字符。</string>
+    <string name="message_server_1001006">密码不能为空。</string>
+    <string name="message_server_1001007">短信验证码错误或已过期。</string>
+    <string name="message_server_1001008">短信验证码不能为空。</string>
+    <string name="message_server_1001009">用户名或密码错误。</string>
+    <string name="message_server_1001010">用户名不存在。</string>
+    <string name="message_server_1001011">昵称不能为空。</string>
+    <string name="message_server_1001012">上传头像文件不能为空。</string>
+    <string name="message_server_1001016">不是有效的邮箱。</string>
+    <string name="message_server_1001017">不是有效的手机。</string>
+    <string name="message_server_1001018">不是有效的日期。</string>
+    <string name="message_server_1001019">反馈内容不能为空。</string>
+    <string name="message_server_1002004">标题不能为空。</string>
+    <string name="message_server_1002005">标题只能包含中英字符和数字。</string>
+    <string name="message_server_1002006">标题不能大于20个字符。</string>
+    <string name="message_server_1002007">描述只能包含中英字符和数字。</string>
+    <string name="message_server_1002008">描述不能大于120个字符。</string>
+    <string name="message_server_1002009">分类不能为空。</string>
+    <string name="message_server_1002010">标签只能包含中英文字符和数字。</string>
+    <string name="message_server_1002011">标签不能大于20个字符。</string>
+    <string name="message_server_1002012">标签个数不能大于5个。</string>
+    <string name="message_server_1003001">复制书模板ID不能为空。</string>
+    <string name="message_server_1003002">复制书模板ID不存在。</string>
+    <string name="message_server_1003003">页面x不能为空。</string>
+    <string name="message_server_1003004">页面y不能为空。</string>
+    <string name="message_server_1009001">关键字不能为空。</string>
+    <string name="message_server_1012001">评论内容不能为空</string>
+    <string name="message_server_1090001">用户不存在。</string>
+    <string name="message_server_1090002">书已下架</string>
+    <string name="message_server_1090101">您没有操作权限</string>
+    <string name="message_server_error">数据错误</string>
+
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/locate"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:visibility="gone"
+    android:gravity="center_vertical" >
+
+    <TextView
+        style="@style/panorama_city_hint"
+        android:id="@+id/total_hint"
+        android:text="全部城市"
+         />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <FrameLayout
+        android:id="@+id/fl_playrecordImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <in.srain.cube.image.CubeImageView
+            android:id="@+id/civ_playrecordImg"
+            android:layout_width="@dimen/record_horizontal_dp"
+            android:layout_height="@dimen/record_vertical_dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tp_yingshimoren" />
+
+        <ImageView
+            android:id="@+id/iv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_vip"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_record_title"
+        android:layout_below="@id/fl_playrecordImg"
+        android:text="终结者511"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/common_ellipsize_text"
+        android:textColor="#d000"
+        />
+</RelativeLayout>

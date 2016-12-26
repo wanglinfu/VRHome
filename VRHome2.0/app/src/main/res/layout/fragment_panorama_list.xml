@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    progressLayout:progress="false"
+    progressLayout:progressBackground="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <in.srain.cube.views.loadmore.LoadMoreGridViewContainer
+                android:id="@+id/load_more_grid_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <in.srain.cube.views.GridViewWithHeaderAndFooter
+                    android:id="@+id/load_more_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="true"
+                    android:clipToPadding="true"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="2"
+                    android:overScrollMode="never"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+
+            </in.srain.cube.views.loadmore.LoadMoreGridViewContainer>
+        </LinearLayout>
+        <!--<ScrollView-->
+        <!--android:id="@+id/sv_panorama_list_gridview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="none"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<com.vrseen.vrstore.view.ExpGridView-->
+        <!--android:id="@+id/panorama_list_gridview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:scrollbars="none"-->
+        <!--android:verticalSpacing="5dp">-->
+
+        <!--</com.vrseen.vrstore.view.ExpGridView>-->
+
+        <!--</LinearLayout>-->
+
+
+        <!--</ScrollView>-->
+
+</com.vrseen.vrstore.view.ProgressRelativeLayout>

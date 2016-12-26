@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/mine_setting_aboutus" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/help_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/iconImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/icon_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            />
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_below="@+id/iconImg"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="1.0.0"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_below="@+id/versionText"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="@string/mine_setting_aboutus_chenjing"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="@string/mine_setting_aboutus_comp_name"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="© 2015-2016VRSeen, All rights reserved"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+ </RelativeLayout>

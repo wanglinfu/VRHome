@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/mine_login_title" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:orientation="vertical"
+        android:paddingTop="70dp">
+
+        <LinearLayout
+            android:id="@+id/ll_step_input_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+            android:id="@+id/et_phone"
+            android:hint="@string/mine_input_phone"
+            android:inputType="phone"
+            android:background="@drawable/textview_radius_white_style"
+            android:maxLength="11"
+            style="@style/common_edit_text"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginTop="15dp"
+                android:id="@+id/et_pwd"
+                android:hint="@string/mine_input_pwd"
+                android:inputType="textWebPassword"
+                style="@style/common_edit_text"
+                android:maxLength="10"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_radius_blue_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/mine_login_title"
+                android:textColor="@color/white"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textview_forget"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_forget_pwd"
+                    />
+
+                <TextView
+                    android:id="@+id/textview_register"
+                    android:layout_marginRight="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine_register"
+                    />
+
+                <ImageView
+                    android:src="@drawable/arrow_right"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center"
+        >
+        <include
+            android:id="@+id/line_1"
+            layout="@layout/view_line"
+            android:layout_centerVertical="true"
+            android:layout_width="120dp"
+            android:layout_height="2dp"/>
+        <TextView
+            android:id="@+id/center_third"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/mine_third_title"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/line_1"
+            />
+
+        <include
+            android:layout_toRightOf="@+id/center_third"
+            android:id="@+id/line_2"
+            layout="@layout/view_line"
+            android:layout_centerVertical="true"
+            android:layout_width="120dp"
+            android:layout_height="2dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        >
+        <ImageView
+            android:id="@+id/img_qq"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/qq"
+            />
+
+        <ImageView
+            android:id="@+id/img_weibo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/weib"
+            />
+
+        <ImageView
+            android:id="@+id/img_weixin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/weix"
+            />
+    </LinearLayout>
+</RelativeLayout>

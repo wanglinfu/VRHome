@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <in.srain.cube.image.CubeImageView
+        android:id="@+id/iv_search_result_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="7"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名称："
+                android:textSize="16sp"
+                android:textColor="@color/titleColor" />
+
+            <TextView
+                android:id="@+id/tv_search_result_name"
+                style="@style/search_result_textview" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年份："
+                android:textSize="16sp"
+                android:textColor="@color/titleColor" />
+
+            <TextView
+                android:id="@+id/tv_search_result_year"
+                style="@style/search_result_textview" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="主演："
+                android:textColor="@color/titleColor" />
+
+            <TextView
+                android:id="@+id/tv_search_result_maincharator"
+                style="@style/search_result_textview" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简介："
+                android:textSize="16sp"
+                android:textColor="@color/titleColor" />
+
+            <TextView
+                android:id="@+id/tv_search_result_description"
+                style="@style/search_result_textview" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_search_result_start"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/common_app_color"
+            android:text="播放"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

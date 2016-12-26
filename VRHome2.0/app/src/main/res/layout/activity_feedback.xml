@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#e9e9e9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/mine_setting_feedback" />
+
+        <TextView
+            android:id="@+id/textview_submit"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:text="@string/mine_setting_feedback_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/adviceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:gravity="top"
+        android:background="@drawable/textview_radius_white_style"
+        android:textColorHint="@color/lightgrayColor"
+        android:hint="@string/mine_setting_feedback_default"
+        android:textColor="@color/lightgrayColor"
+        android:textSize="13sp"
+        android:maxLength="300"
+        android:imeOptions="actionSend"
+        />
+
+    <TextView
+        style="@style/common_gray_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/mine_setting_feedback_default2"
+        />
+
+</LinearLayout>

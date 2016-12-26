@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/mine_vip_exchange" />
+
+        <TextView
+            android:id="@+id/textview_config"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/config"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/title_bar_height"
+        android:background="@color/borderColor"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            style="@style/common_black_text"
+            android:text="兑换优惠劵" />
+
+        <EditText
+            android:id="@+id/et_card"
+            android:hint="@string/mine_vip_exchange_input_card"
+            android:inputType="text"
+            style="@style/common_edit_text"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_below="@id/et_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                style="@style/common_black_text"
+                android:text="@string/mine_vip_exchange_title1" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                style="@style/common_gray_text"
+                android:text="@string/mine_vip_exchange_desp1" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="38dp"
+                style="@style/common_black_text"
+                android:text="@string/mine_vip_exchange_title2" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="20dp"
+                style="@style/common_gray_text"
+                android:text="@string/mine_vip_exchange_desp2" />
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                style="@style/common_gray_text"
+                android:text="@string/mine_vip_exchange_desp3" />
+
+        </LinearLayout>
+    </RelativeLayout>
+ </RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="@style/TitleBar">
+
+        <include
+            android:id="@+id/view_back"
+            layout="@layout/view_title_bar_back" />
+
+        <LinearLayout
+            android:id="@+id/ll_panorama_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/view_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_panorama_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:text="测试"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_dibiaox" />
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/TV.Title"
+            android:text="@string/panorama_title" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/icon_suos" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_menu1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar">
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/viewpagertab"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="0dp"
+            android:background="@color/white"
+            app:stl_clickable="true"
+            app:stl_customTabTextLayoutId="@layout/custom_tab"
+            app:stl_defaultTabBackground="?attr/selectableItemBackground"
+            app:stl_defaultTabTextHorizontalPadding="16dp"
+            app:stl_defaultTabTextSize="14sp"
+            app:stl_distributeEvenly="false"
+            app:stl_dividerColor="@color/transparent"
+            app:stl_drawDecorationAfterTab="false"
+            app:stl_indicatorAlwaysInCenter="false"
+            app:stl_indicatorColor="@color/mainColor"
+            app:stl_indicatorInFront="false"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorThickness="2dp"
+            app:stl_indicatorWidth="auto"
+            app:stl_indicatorWithoutPadding="false"
+            app:stl_underlineColor="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/ll_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/borderColor"
+            android:paddingBottom="2dp"
+            android:paddingLeft="1dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="导航"
+                android:textColor="@color/mainColor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_menu1" />
+
+    <LinearLayout
+        android:id="@+id/view_menu2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/view_menu1"
+        android:alpha="0.8"
+        android:background="@color/border_color"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <GridView
+            android:id="@+id/gv_panorama_all_type"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+        </GridView>
+
+    </LinearLayout>
+
+    <include layout="@layout/float_button_layout" />
+
+</RelativeLayout>

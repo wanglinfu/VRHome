@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vrseen.vrstore.view.ProgressRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    progressLayout:progress="false"
+    progressLayout:progressBackground="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+            <!-- 头部actionBar -->
+            <RelativeLayout
+                android:id="@+id/title_bar"
+                style="@style/TitleBar">
+
+                <include
+                    android:id="@+id/view_back"
+                    layout="@layout/view_title_bar_back" />
+
+                <LinearLayout
+                    android:id="@+id/ll_panorama_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/view_back"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_panorama_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:text="测试"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_dibiaox" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TV.Title"
+                    android:text="@string/panorama_title" />
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_suos" />
+
+            </RelativeLayout>
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/store_app_ptr_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ptr_duration_to_close="200"
+                app:ptr_duration_to_close_header="1000"
+                app:ptr_keep_header_when_refresh="true"
+                app:ptr_pull_to_fresh="false"
+                app:ptr_ratio_of_header_height_to_refresh="1.2"
+                app:ptr_resistance="8.7">
+
+                <com.vrseen.vrstore.view.ScrollableLayout
+                    android:id="@+id/app_scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--头部-->
+                    <LinearLayout
+                        android:id="@+id/ll_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include
+                                android:id="@+id/view_panorama_head"
+                                layout="@layout/view_home_head" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/bgColor" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp">
+
+                            <TextView
+                                android:id="@+id/view1"
+                                android:layout_width="5dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@color/common_app_color" />
+
+                            <TextView
+                                android:id="@+id/panorama_title_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/view1"
+                                android:textColor="@color/titleColor"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/panorama_title_more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:text="查看更多"
+                                android:textColor="@color/contentColor"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/panorama_recommend_type1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="3dp"
+                                android:orientation="horizontal">
+
+                                <include
+                                    android:id="@+id/panorama_recommend1"
+                                    layout="@layout/item_panorama_album"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:layout_width="3dp"
+                                    android:layout_height="match_parent" />
+
+                                <include
+                                    android:id="@+id/panorama_recommend2"
+                                    layout="@layout/item_panorama_album"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                            <include
+                                android:id="@+id/panorama_recommend3"
+                                layout="@layout/item_panorama_album"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="5dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.ogaclejapan.smarttablayout.SmartTabLayout
+                        android:id="@+id/viewpagertab"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/move_gridview"
+                        app:stl_clickable="true"
+                        app:stl_customTabTextLayoutId="@layout/custom_tab"
+                        app:stl_defaultTabBackground="@drawable/item_panorama_menu"
+                        app:stl_defaultTabTextHorizontalPadding="3dp"
+                        app:stl_defaultTabTextSize="10sp"
+                        app:stl_distributeEvenly="false"
+                        app:stl_dividerColor="@color/transparent"
+                        app:stl_drawDecorationAfterTab="false"
+                        app:stl_indicatorAlwaysInCenter="false"
+                        app:stl_indicatorColor="@color/mainColor"
+                        app:stl_indicatorInterpolation="linear"
+                        app:stl_indicatorThickness="2dp"
+                        app:stl_indicatorWidth="auto"
+                        app:stl_indicatorWithoutPadding="false"
+                        app:stl_underlineColor="@color/transparent" />
+
+                    <LinearLayout
+                        android:id="@+id/view_menu2"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/view_menu1"
+                        android:layout_marginBottom="10dp"
+                        android:alpha="0.8"
+                        android:background="@color/border_color"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <GridView
+                            android:id="@+id/gv_panorama_all_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:overScrollMode="never">
+
+                        </GridView>
+                    </LinearLayout>
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/app_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent" />
+
+                </com.vrseen.vrstore.view.ScrollableLayout>
+
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/float_button_layout" />
+
+    </RelativeLayout>
+
+</com.vrseen.vrstore.view.ProgressRelativeLayout>
